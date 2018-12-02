@@ -37,26 +37,29 @@ export default class Login extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={{color: '#fff'}}>Login </Text>
+        <Text style={{color: '#fff', fontSize: 25, fontWeight: 'bold', marginBottom: 15}}>Login </Text>
         
         <TextInput 
         placeholder="Email" 
-        style={{height: 40, width: 250, borderColor: 'gray', borderWidth: 1, border: 1}}
+        style={{height: 40, width: 250, backgroundColor: '#E0E0E0', borderRadius: 20, marginBottom: 10}}
         onChangeText={(e) => this.setState({emailRef: e})} />
         
         <TextInput 
-        placeholder="Password" 
-        style={{height: 40, width: 250, borderColor: 'gray', borderWidth: 1, border: 1}}
+        placeholder="Password" type="password"
+        style={{height: 40, width: 250,  backgroundColor: '#E0E0E0', borderRadius: 20, marginBottom: 10}}
         onChangeText={(e) => this.setState({passRef: e})} />
         
         <Button
         title="Go to Dashboard"
         onPress={this.next}
+        color= '#8BC34A'
+        containerStyle={{marginBottom: 10}}
         />
 
         <Button
         title="Sign up"
         onPress={this.signup.bind(this)}
+        color= '#8BC34A'
         />
         {/* <Hyperlink linkText = "SignUp" /> */}
       </View>

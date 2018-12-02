@@ -13,7 +13,14 @@ const StackNavigator = createStackNavigator({
     Dashboard: {
         screen: Dashboard
     },
-})
+},
+{
+    headerMode: 'none',
+    navigationOptions: {
+        headerVisible: false,
+    }
+}
+)
   
 // const TabNavigator = createMaterialTopTabNavigator({
 //     Home: {
